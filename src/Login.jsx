@@ -1,28 +1,55 @@
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
+import React, { useState } from 'react';
 
 function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Aqui você pode adicionar a lógica de autenticação.
+    // Por exemplo, você pode verificar se o email e a senha correspondem a um usuário válido.
+
+    if (email === 'usuario@example.com' && password === 'senha123') {
+      setLoggedIn(true);
+      alert('Login bem-sucedido!');
+    } else {
+      alert('Credenciais inválidas. Tente novamente.');
+    }
+  };
+
   return (
-    <Form>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Endereço de e-mail</Form.Label>
-        <Form.Control type="email" placeholder="Insira seu email" />
-
-      </Form.Group>
-
-      <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Senha</Form.Label>
-        <Form.Control type="password" placeholder="Insira a senha" />
-      </Form.Group>
-
-      <Button variant="primary" type="submit">
-        Continuar
-      </Button>
-      <br/>
-      <Form.Text className="text-muted">
-          Nós nunca vamos compartilhar suas informações.
-        </Form.Text>
-    </Form>
+    <div>
+      <h1>Login</h1>
+      {loggedIn ? (
+        <p>Você está logado.</p>
+      ) : (
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="password">Senha:</label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit">Login</button>
+        </form>
+      )}
+    </div>
   );
 }
 
