@@ -1,12 +1,11 @@
-import {} from 'react';
-/*importando o bootstrap */
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ProgressBar from 'react-bootstrap/ProgressBar';
-/*importando todas as imagens */
 import Imagem1 from './assets/produto-hero.jpg';
 import Img1 from './assets/cat-img-1.jpg';
-import Img3 from './assets/cat-img-3.jpg';
-import Img4 from './assets/cat-img-3.jpg';
+import Img2 from './assets/cat-img-3.jpg';
+import Img3 from './assets/cat-img-4.jpg';
+import Img4 from './assets/cat-img-5.jpg';
 import Produto1 from './assets/product-1.jpg';
 import Produto2 from './assets/product-2.jpg';
 import Produto3 from './assets/product-3.jpg';
