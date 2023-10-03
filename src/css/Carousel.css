@@ -1,0 +1,26 @@
+/* Carousel.css */
+
+.carousel-container {
+    max-width: 600px; /* Defina a largura máxima desejada para o carrossel */
+    margin: 0 auto; /* Centralize o carrossel horizontalmente */
+    overflow: hidden; /* Esconda as partes das imagens que não se encaixam na altura */
+    position: relative;
+  }
+  
+  .carousel-inner {
+    display: flex;
+    align-items: center;
+    height: 400px; /* Defina a altura fixa desejada para o carrossel */
+  }
+  
+  .carousel-item {
+    flex: 0 0 100%; /* Impede que as imagens redimensionem o carrossel horizontalmente */
+    text-align: center; /* Centraliza as imagens horizontalmente */
+  }
+  
+  .carousel-image {
+    max-height: 100%; /* Defina a altura máxima desejada para as imagens */
+    max-width: 100%; /* Defina a largura máxima desejada para as imagens */
+    margin: 0 auto; /* Centralize as imagens horizontalmente */
+  }
+  
